@@ -10,8 +10,8 @@ class Tw < Formula
   depends_on 'go' => :build
 
   def install
-    system 'curl' '-o' 'tw' 'https://github.com/upamune/tw/releases/download/v1.3.0/tw_darwin_amd64'
-    system 'chmod' '+x' 'tw'
+    system 'curl','-o','tw',"https://github.com/upamune/tw/releases/download/v#{HOMEBREW_TW_VERSION}/tw_darwin_amd64"
+    system 'chmod','+x','tw'
     bin.install 'tw'
   end
 end
