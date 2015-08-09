@@ -1,6 +1,6 @@
 require 'formula'
 
-HOMEBREW_TW_VERSION='1.3.0'
+HOMEBREW_TW_VERSION='1.4.0'
 class Tw < Formula
   homepage 'https://github.com/upamune/tw'
   url 'https://github.com/upamune/tw.git', :tag => "v#{HOMEBREW_TW_VERSION}"
