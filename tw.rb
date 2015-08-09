@@ -7,18 +7,8 @@ class Tw < Formula
   version HOMEBREW_TW_VERSION
   head 'https://github.com/upamune/tw.git', :branch => 'master'
 
-  depends_on 'go' => :build
-
   def install
-    ENV['GOPATH'] = buildpath
-    system 'go', 'get', 'github.com/codegangsta/cli'
-    system 'go', 'get', 'github.com/ChimeraCoder/anaconda'
-    system 'go', 'get', 'github.com/mitchellh/go-homedir'
-    system 'go', 'get', 'github.com/mrjones/oauth'
-    system 'go', 'get', 'github.com/skratchdot/open-golang/open'
-    system 'go', 'get', 'github.com/mgutz/ansi'
-    system 'go', 'get', 'github.com/BurntSushi/toml'
-    system 'go', 'build', '-o', 'tw'
+    system 'curl','-L','-o','tw',"https://github.com/upamune/tw/releases/download/v#{HOMEBREW_TW_VERSION}/tw_darwin_amd64"
     bin.install 'tw'
   end
 end
